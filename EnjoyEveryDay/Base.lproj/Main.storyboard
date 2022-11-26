@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EnjoyEveryDay" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Радуйся каждому дню!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REE-zO-v1i">
+                                <rect key="frame" x="43" y="139" width="307" height="37"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Выбери свой День Рождения!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8N-Na-bSo">
+                                <rect key="frame" x="26.666666666666657" y="206" width="340" height="32"/>
+                                <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="qEs-TA-eCt">
+                                <rect key="frame" x="37" y="268" width="320" height="216"/>
+                                <connections>
+                                    <action selector="DatePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="9N6-Vj-bhY"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n4X-0I-dMy">
+                                <rect key="frame" x="136.66666666666666" y="504" width="119.99999999999997" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="5w4-Is-yVA"/>
+                                    <constraint firstAttribute="height" constant="51" id="QhK-hZ-y8G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Результат"/>
+                                <connections>
+                                    <action selector="ResultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="6CE-GB-Ud0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ты наслаждаешься жизнью уже...дней" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uee-nn-ehf">
+                                <rect key="frame" x="74" y="575" width="245" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <constraints>
+                            <constraint firstItem="REE-zO-v1i" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4vT-6P-NfW"/>
+                            <constraint firstItem="i8N-Na-bSo" firstAttribute="top" secondItem="REE-zO-v1i" secondAttribute="bottom" constant="30" id="ABP-yG-3Q0"/>
+                            <constraint firstItem="n4X-0I-dMy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KCB-GK-vFl"/>
+                            <constraint firstItem="Uee-nn-ehf" firstAttribute="top" secondItem="n4X-0I-dMy" secondAttribute="bottom" constant="20" id="M9D-wS-uI5"/>
+                            <constraint firstItem="n4X-0I-dMy" firstAttribute="top" secondItem="qEs-TA-eCt" secondAttribute="bottom" constant="20" id="Or4-TA-hUl"/>
+                            <constraint firstItem="qEs-TA-eCt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Pkf-eJ-7JT"/>
+                            <constraint firstItem="qEs-TA-eCt" firstAttribute="top" secondItem="i8N-Na-bSo" secondAttribute="bottom" constant="30" id="j3U-oG-nrx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Uee-nn-ehf" secondAttribute="trailing" constant="74" id="jQm-a1-o9D"/>
+                            <constraint firstItem="Uee-nn-ehf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="74" id="kh3-gy-GIR"/>
+                            <constraint firstItem="i8N-Na-bSo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tEG-c5-di4"/>
+                            <constraint firstItem="REE-zO-v1i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="uom-3k-tUk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="InfoLabel" destination="Uee-nn-ehf" id="e1l-Of-Ldh"/>
+                        <outlet property="ResultButton" destination="n4X-0I-dMy" id="PnK-Lw-wxU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.1145038167939" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
